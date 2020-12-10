@@ -5,15 +5,15 @@ import React, { Component } from 'react'
 import Input from './Input'
 import List from './List'
 
-// Create class
+// Create class for component
 class FruitContainer extends Component {
     // Create constructor
     constructor(props) {
         super()
         this.state = {
-            // Initialize fruit list to the full list passed into props
+            // Initialize fruitsToDisplay array as array from props
             fruitsToDisplay: props.fruits,
-            // Initialize the filter value to an empty string
+            // Initialize filterValue string as empty string
             filterValue: ''
         }
     }
@@ -31,6 +31,7 @@ class FruitContainer extends Component {
         this.setState({ fruitsToDisplay: filteredFruitList, filterValue })
     }
     
+    // Render page
     render() {
         // Log the states and props, as they adjust based on different filter queries
         console.log('---- state ----')
@@ -38,16 +39,20 @@ class FruitContainer extends Component {
         console.log('---- props ----')
         console.log(this.props.fruits)
 
+        // Return this info to the page
         return(
             <div>
                 <ul>
                     {/* Send info to Input to use as props */}
                     <Input
+                        // Send above filterValue string as value
                         value={this.state.filterValue}
+                        // Send above handleFilterChange function as onChange
                         onChange ={this.handleFilterChange}
                     />
                     {/* Send info to List to use as props */}
                     <List
+                        // Send above fruitsToDisplay array as fruits
                         fruits={this.state.fruitsToDisplay}
                     />
                 </ul>
@@ -56,4 +61,5 @@ class FruitContainer extends Component {
     }
 }
 
+// Export component
 export default FruitContainer
