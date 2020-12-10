@@ -10,7 +10,7 @@ class FruitContainer extends Component {
         super()
         this.state = {
             // Initialize fruit list to the full list passed into props
-            fruitsToDisplay: this.props.fruits,
+            fruitsToDisplay: props.fruits,
             // Initialize the filter value to an empty string
             filterValue: ''
         }
@@ -32,7 +32,7 @@ class FruitContainer extends Component {
         // Inside of List component, to access props, I will say props.fruits
         // You can console.log before the return, but not inside it
         console.log('Inside Fruit Container')
-        
+
         return(
             <div>
                 <ul>
