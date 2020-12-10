@@ -2,7 +2,7 @@ import './App.css'
 import FruitContainer from './components/FruitContainer'
 
 function App() {
-    const fruits = ['banana', 'watermelon', 'apple', 'orange']
+    const fruits = ['banana', 'watermelon', 'apple', 'orange', 'kiwi', 'crabapple', 'grape', 'grapefruit', 'mango', 'starfruit']
 
     return (
         <div className='App-header'>
