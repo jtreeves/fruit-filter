@@ -11,7 +11,8 @@ class Input extends Component {
     render() {
         return(
             <div>
-                <h1>Input</h1>
+                <label htmlFor='fruit-filter'>Filter These Fruits: </label>
+                <input type='text' name='fruit-filter' />
             </div>
         )
     }
