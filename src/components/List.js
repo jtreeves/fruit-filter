@@ -9,10 +9,14 @@ class List extends Component {
     }
 
     render() {
+        const fruitItems = this.props.fruits.map((fruit, index) => {
+            return <li>{fruit}</li>
+        })
+
         return(
             <div>
                 <ul>
-                    {/* <li>List will go here</li> */}
+                    {fruitItems}
                 </ul>
             </div>
         )

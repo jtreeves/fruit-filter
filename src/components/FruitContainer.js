@@ -32,6 +32,7 @@ class FruitContainer extends Component {
         // Inside of List component, to access props, I will say props.fruits
         // You can console.log before the return, but not inside it
         console.log('Inside Fruit Container')
+        
         return(
             <div>
                 <ul>
