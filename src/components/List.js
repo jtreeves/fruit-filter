@@ -7,7 +7,7 @@ class List extends Component {
     render() {
         // Map over fruits and list each item
         const fruitItems = this.props.fruits.map((fruit, index) => {
-            return <li>{fruit}</li>
+            return <li key={index}>{fruit}</li>
         })
 
         // Return this info to the page
