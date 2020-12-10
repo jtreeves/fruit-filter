@@ -28,6 +28,8 @@ class FruitContainer extends Component {
     }
     
     render() {
+        // Inside of Input component, to access props, I will say props.value
+        // Inside of List component, to access props, I will say props.fruits
         // You can console.log before the return, but not inside it
         console.log('Inside Fruit Container')
         return(
