@@ -1,11 +1,13 @@
-// Main establishment
+// Import React's Component
 import React, { Component } from 'react'
 
-// Components
+// Import other components
 import Input from './Input'
 import List from './List'
 
+// Create class
 class FruitContainer extends Component {
+    // Create constructor
     constructor(props) {
         super()
         this.state = {
@@ -16,8 +18,10 @@ class FruitContainer extends Component {
         }
     }
 
+    // Create function for filtering
     handleFilterChange = (event) => {
         event.preventDefault()
+        // Grab text inputed by user
         let filterValue = event.target.value
         // Remove the fruits that don't contain the filter value
         const filteredFruitList = this.props.fruits.filter(fruit => {
@@ -28,18 +32,21 @@ class FruitContainer extends Component {
     }
     
     render() {
+        // Log the states and props, as they adjust based on different filter queries
         console.log('---- state ----')
         console.log(this.state.fruitsToDisplay)
         console.log('---- props ----')
         console.log(this.props.fruits)
-        
+
         return(
             <div>
                 <ul>
+                    {/* Send info to Input to use as props */}
                     <Input
                         value={this.state.filterValue}
                         onChange ={this.handleFilterChange}
                     />
+                    {/* Send info to List to use as props */}
                     <List
                         fruits={this.state.fruitsToDisplay}
                     />
