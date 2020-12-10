@@ -1,6 +1,7 @@
 import './App.css'
 import Input from './components/Input'
 import List from './components/List'
+import FruitContainer from './components/FruitContainer'
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
             <h1>Fruit Filter</h1>
             <Input />
             <List />
+            <FruitContainer />
         </div>
     )
 }
