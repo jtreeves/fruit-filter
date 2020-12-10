@@ -20,7 +20,11 @@ class FruitContainer extends Component {
         event.preventDefault()
         let filterValue = event.target.value
         // Remove the fruits that don't contain the filter value
-        
+        const filteredFruitList = this.props.fruits.filter(fruit => {
+            return fruit.toLowerCase().includes(filterValue.toLowerCase())
+        })
+        // Reset state
+        this.setState({ fruitsToDisplay: filteredFruitList, filterValue })
     }
     
     render() {
