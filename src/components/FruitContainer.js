@@ -22,13 +22,13 @@ class FruitContainer extends Component {
     handleFilterChange = (event) => {
         event.preventDefault()
         // Grab text inputed by user
-        let filterValue = event.target.value
+        const filteredValue = event.target.value
         // Remove the fruits that don't contain the filter value
         const filteredFruitList = this.props.fruits.filter(fruit => {
             return fruit.toLowerCase().includes(filterValue.toLowerCase())
         })
         // Reset state
-        this.setState({ fruitsToDisplay: filteredFruitList, filterValue })
+        this.setState({ fruitsToDisplay: filteredFruitList, filterValue: filteredValue })
     }
     
     // Render page
