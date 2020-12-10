@@ -28,10 +28,18 @@ class FruitContainer extends Component {
     }
     
     render() {
+        // You can console.log before the return, but not inside it
+        console.log('Inside Fruit Container')
         return(
             <div>
                 <ul>
-                    {/* <li>List will go here</li> */}
+                    <Input
+                        value={this.state.filterValue}
+                        onChange ={this.handleFilterChange}
+                    />
+                    <List
+                        fruits={this.state.fruitsToDisplay}
+                    />
                 </ul>
             </div>
         )
